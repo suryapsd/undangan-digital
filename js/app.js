@@ -623,8 +623,8 @@ window.addEventListener(
         <p class="text-xl md:text-3xl py-2 font-medium text-[#CA7F83]">${escapeHtml(name)}</p>
         `;
 
-      document.getElementById("formnama").value = name;
       document.getElementById("namaTamu").appendChild(div);
+      document.getElementById("formnama").value = name;
     }
 
     modal.show();
