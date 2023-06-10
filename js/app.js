@@ -605,3 +605,29 @@ const kirim = async () => {
   document.getElementById("kirim").disabled = false;
   document.getElementById("kirim").innerHTML = tmp;
 };
+
+window.addEventListener(
+  "load",
+  () => {
+    let modal = new bootstrap.Modal("#exampleModal");
+    let name = new URLSearchParams(window.location.search).get("to") ?? "";
+    console.log(name)
+
+    if (name.length == 0) {
+      document.getElementById("namatamu").remove();
+    } else {
+      let div = document.createElement("div");
+      div.classList.add("m-2");
+      div.innerHTML = `
+        <p class="md:text-lg font-light py-2 text-[#686868]">Kepada Bapak/Ibu/Saudara/i</p>
+        <p class="text-xl md:text-3xl py-2 font-medium text-[#CA7F83]">${escapeHtml(name)}</p>
+        `;
+
+      document.getElementById("formnama").value = name;
+      document.getElementById("namatamu").appendChild(div);
+    }
+
+    modal.show();
+  },
+  false
+);
