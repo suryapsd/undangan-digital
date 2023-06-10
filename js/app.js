@@ -610,12 +610,7 @@ window.addEventListener(
   "load",
   () => {
     let modal = new bootstrap.Modal("#exampleModal");
-    // Mengambil URL saat ini
-    var url = new URL(window.location.href);
-
-    // Mengambil parameter "nama" dari URL
-    var params = new URLSearchParams(url.search);
-    var name = params.get("to");
+    let name = new URLSearchParams(window.location.search).get("to") ?? "";
     console.log(name)
 
     if (name.length == 0) {
