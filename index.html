@@ -279,23 +279,39 @@
 
   <div class="loading" id="loading"></div>
 
-    <!-- Extra Large Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-fullscreen m-0">
-        <div class="modal-content m-0 p-0">
-          <div class="d-flex justify-content-center align-items-center" style=" background-image: url('assets/bg/bg1.jpg'); background-size: cover; height: 100vh !important; ">
-            <div class="text-center">
-              <p class="text-lg md:text-3xl font-medium text-[#CA7F83]">Undangan Mepandes</p>
-              <h1 class="text-4xl md:text-6xl font-medium py-4 text-[#686868]">Wahyu & Riski</h1>
-              <p class="md:text-lg font-light py-2 text-[#686868]">Kepada Bapak/Ibu/Saudara/i</p>
-              <div id="namatamu"></div>
-              <p class="md:text-lg font-light py-2 text-[#686868]">Anda dengan hormat diundang ke acara mepandes kami.</p>
-              <button type="button" class="py-2 px-4 mt-4 bg-white hover:bg-gray-400 hover:shadow-lg hover:-translate-y-1 duration-100 rounded-lg text-[#CA7F83]" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="buka()">
-              <i class="bi bi-envelope-open mr-2"></i></i>Buka Undangan </button>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen m-0">
+      <div class="modal-content m-0 p-0">
+        <div
+          class="d-flex justify-content-center align-items-center"
+          style="height: 100vh !important"
+        >
+          <div class="text-center">
+            <h1 class="font-estetik mb-4" style="font-size: 2.2rem">
+              The Wedding Of
+            </h1>
+            <div
+              class="cropper border border-3 border-light shadow mb-4 mx-auto"
+            >
+              <img src="assets/images/bg.jpeg" alt="bg" />
             </div>
+            <h1 class="font-estetik my-4" style="font-size: 2.5rem">
+              Wahyu & Riski
+            </h1>
+            <div id="namatamu"></div>
+            <button
+              type="button"
+              class="btn btn-light shadow rounded-4 mt-4"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              onclick="buka()"
+            >
+              <i class="fa-solid fa-envelope-open me-2"></i>Buka Undangan
+            </button>
           </div>
         </div>
       </div>
+    </div>
   </div>
   <script>
     // Fungsi untuk menambahkan kelas "active" pada tautan navbar yang sesuai
