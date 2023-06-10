@@ -47,25 +47,96 @@
     />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
-      integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8="
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
       integrity="sha256-GqiEX9BuR1rv5zPU5Vs2qS/NSHl1BJyBcjQYJ6ycwD4="
       crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap"
-    />
-    <link rel="stylesheet" href="css/app.css" />
+    <!-- Boostrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet"/>
+    <style>
+          body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Josefin Sans",
+              "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+              "Droid Sans", "Helvetica Neue", sans-serif;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          }
+          code {
+            font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+              monospace;
+          }
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+            font-family: "Kalam", cursive;
+          }
+          p,
+          span {
+            font-family: "Josefin Sans", sans-serif;
+          }
+          .active {
+            color: #ca7f83;
+          }
+          ::-webkit-scrollbar {
+            width: 6px;
+          }
+          ::-webkit-scrollbar-thumb {
+            background: rgb(196, 196, 196);
+            border-radius: 6px;
+          }
+          ::-webkit-scrollbar-thumb:hover {
+            background: rgb(160, 160, 160);
+          }
+
+          /* Added CSS */
+          .bg-hero-top {
+            background-image: url('assets/bg/flower1.png');
+            background-repeat: no-repeat;
+            background-position: top right;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+          }
+          
+          .bg-hero-bottom {
+            background-image: url('assets/bg/flower2.png');
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+          }
+
+          /* Media queries for mobile devices */
+          @media (max-width: 767px) {
+            .bg-hero-top {
+              background-size: contain;
+              background-position: top center;
+            }
+
+            .bg-hero-bottom {
+              background-size: contain;
+              background-position: bottom center;
+            }
+          }
+    </style>
   </head>
 
   <body
