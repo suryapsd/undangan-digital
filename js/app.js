@@ -614,7 +614,7 @@ window.addEventListener(
     console.log(name)
 
     if (name.length == 0) {
-      document.getElementById("namatamu").remove();
+      document.getElementById("namaTamu").remove();
     } else {
       let div = document.createElement("div");
       div.classList.add("m-2");
@@ -624,7 +624,7 @@ window.addEventListener(
         `;
 
       document.getElementById("formnama").value = name;
-      document.getElementById("namatamu").appendChild(div);
+      document.getElementById("namaTamu").appendChild(div);
     }
 
     modal.show();
