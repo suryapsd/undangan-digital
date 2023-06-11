@@ -81,11 +81,11 @@ const play = (btn) => {
   if (btn.getAttribute('data-status').toString() != 'true') {
       btn.setAttribute('data-status', 'true');
       audio.play();
-      btn.innerHTML = '<i class="fa-solid fa-circle-pause"></i>';
+      btn.innerHTML = '<span class="material-symbols-outlined">pause_circle</span>';
   } else {
       btn.setAttribute('data-status', 'false');
       audio.pause();
-      btn.innerHTML = '<i class="fa-solid fa-circle-play"></i>';
+      btn.innerHTML = '<span class="material-symbols-outlined">play_circle</span>';
   }
 };
 
@@ -279,10 +279,10 @@ const renderCard = (data) => {
   const DIV = document.createElement('div');
   DIV.classList.add('mb-3');
   DIV.innerHTML = `
-  <div class="bg-white border border-gray-200 rounded-xl px-4 py-4" id="${data.uuid}">
+  <div data-aos="fade-up" class="bg-white border border-gray-200 rounded-xl px-4 py-4" id="${data.uuid}">
     <div class="flex flex-wrap justify-between items-center">
         <p class="text-dark truncate m-0 p-0 text-sm">
-        <strong class="me-1">${escapeHtml(data.nama)}</strong>${data.hadir ? '<i class="fa-solid fa-circle-check text-success"></i>' : '<i class="fa-solid fa-circle-xmark text-danger"></i>'}
+        <strong class="me-1">${escapeHtml(data.nama)}</strong>${data.hadir ? '<span class="text-xs text-[#686868]">(<i class="fa-solid fa-circle-check"></i> Hadir)</span>' : '<span class="text-xs text-[#686868]">(<i class="fa-solid fa-circle-xmark"></i> Tidak Hadir)</span>'}
         </p>
         <small class="text-dark m-0 p-0 text-xs">${data.created_at}</small>
     </div>
@@ -324,11 +324,11 @@ const pagination = (() => {
   var resultData = 0;
 
   var disabledPrevious = () => {
-      document.getElementById('previous').classList.add('disabled');
+      document.getElementById('previous').disabled = true;
   };
 
   var disabledNext = () => {
-      document.getElementById('next').classList.add('disabled');
+      document.getElementById('next').disabled = true;
   };
 
   var buttonAction = async (button) => {
@@ -352,7 +352,7 @@ const pagination = (() => {
           pageNow = 0;
           resultData = 0;
           await ucapan();
-          document.getElementById('next').classList.remove('disabled');
+          document.getElementById('next').disabled = false;
           disabledPrevious();
       },
       setResultData: (len) => {
@@ -368,7 +368,7 @@ const pagination = (() => {
               pageNow -= perPage;
               disabledNext();
               await buttonAction(button);
-              document.getElementById('next').classList.remove('disabled');
+              document.getElementById('next').disabled = false;
               if (pageNow <= 0) {
                   disabledPrevious();
               }
@@ -381,7 +381,7 @@ const pagination = (() => {
               pageNow += perPage;
               disabledPrevious();
               await buttonAction(button);
-              document.getElementById('previous').classList.remove('disabled');
+              document.getElementById('previous').disabled = false;
           }
       }
   };
