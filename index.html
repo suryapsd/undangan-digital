@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Undangan Mepandes</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Bootstrap CSS hanya untuk modal -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
     <link rel="preconnect" href="https://undangan-api-gules.vercel.app" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://gstatic.com" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css" integrity="sha256-WAgYcAck1C1/zEl5sBl5cfyhxtLgKGdpI3oKyJffVRI=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" integrity="sha256-Fu5/PVNGJlC70y4mPEjA6nWVdPz2IMaBrXGQCJEsRho=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" integrity="sha256-GqiEX9BuR1rv5zPU5Vs2qS/NSHl1BJyBcjQYJ6ycwD4=" crossorigin="anonymous">
     <!-- Boostrap Icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous"/>
@@ -74,7 +77,7 @@
             height: 80%;
             z-index: 10;
           }
-          
+
           .bg-hero-bottom {
             background-image: url('assets/bg/flower2.png');
             background-repeat: no-repeat;
@@ -91,17 +94,20 @@
           /* Media queries for mobile devices */
           @media (max-width: 767px) {
             .bg-hero-top {
+              background-size: cover;
               width: 50%;
               height: 50%;
             }
 
             .bg-hero-bottom {
+              background-size: cover;
               width: 50%;
               height: 50%;
             }
           }
     </style>
     <link rel="stylesheet" href="css/app.css" />
+    <!-- <link rel="stylesheet" href="css/bootstrap.css" /> -->
   </head>
   <body class="bg-white mb-24" data-email="user@example.com" data-password="12345678" data-url="https://undangan-api-gules.vercel.app">
     <div class="fixed bottom-0 z-50 w-full">
@@ -173,11 +179,8 @@
                 & <br/>Ibu Ni Putu Yeni</p>
             </div>
           </div>
-          <p class="text-md md:text-xl font-light italic text-[#686868]">
-            <span class="material-symbols-outlined">format_quote</span>
-            Om Hyang Widhi Wasa, semoga hamba mendapatkan perkenan-Mu, untuk melalui tahapan hidup ini dalam jalan-Mu dengan pertolongan hanya dari-MU. <br/>Om dimulyakanlah Engkau ya Tuhan.</p>
-          <span class="text-xl font-normal flex items-center text-[#686868] mt-4"><span class="material-symbols-outlined mr-2 pb-0.5">folded_hands</span>
-          Doa</span>
+          <p class="text-md md:text-xl font-light italic text-[#686868]"><span class="material-symbols-outlined">format_quote</span>Om Hyang Widhi Wasa, semoga hamba mendapatkan perkenan-Mu, untuk melalui tahapan hidup ini dalam jalan-Mu dengan pertolongan hanya dari-MU. <br/>Om dimulyakanlah Engkau ya Tuhan.</p>
+          <span class="text-xl font-normal flex items-center text-[#686868] mt-4"><span class="material-symbols-outlined mr-2 pb-0.5">folded_hands</span>Doa</span>
         </div>
       </section>
 
@@ -187,7 +190,7 @@
           <p class="text-md md:text-xl font-light italic text-center text-[#686868]">
             Merupakan suatu kehormatan dan kebahagian kami apabila Bapak/Ibu/Saudara/i berkenan hadir memberikan doa restu.
           </p>
-          <div class="w-full md:w-2/6 flex rounded-xl outline outline-1 outline-[#686868] my-12">
+          <div class="w-full md:w-3/6 flex rounded-xl outline outline-1 outline-[#686868] my-12">
             <div class="bg-white flex flex-col justify-center items-center text-center w-2/6 py-2 md:px-8 md:py-8 rounded-l-xl">
               <p class="text-4xl md:text-6xl font-medium text-[#686868]">16</p>
               <p class="text-md md:text-lg font-normal text-[#686868]">Juni 2023</p>
@@ -229,7 +232,7 @@
       </section>
 
       <div class="mx-auto">
-        <div class="w-full flex flex-col justify-center items-center bg-white text-center px-4 py-4 md:px-36 md:my-12">
+        <div class="w-full flex flex-col justify-center items-center bg-white text-center px-4 py-4 md:px-36 md:my-12 lg:px-36 lg:my-12">
           <h1 class="text-2xl md:text-4xl text-[#CA7F83] mb-2">Love Gift</h1>
           <p class="text-md md:text-xl font-light italic text-[#686868]">
             Tanpa mengurangi rasa hormat, bagi anda yang ingin memberikan tanda kasih untuk kami, dapat melalui :
@@ -261,82 +264,52 @@
 
       <section class="mx-auto" id="ucapan">
         <div class="px-4 py-4 md:px-36 md:my-12">
-          <div class="bg-white border-[1px] border-gray-200 rounded-xl mx-2">
-            <h1 class="text-2xl md:text-4xl text-[#CA7F83] mb-2" style="font-size: 3rem">
+          <div class="bg-white border-[1px] border-gray-200 rounded-xl px-4 py-8">
+            <h1 class="text-2xl md:text-4xl text-center text-[#CA7F83] mb-2">
               Ucapan & Doa
             </h1>
             <input type="hidden" id="idbalasan" />
             <div class="mb-1" id="balasan"></div>
-            <div class="mb-3">
-              <label for="formnama" class="form-label">Nama</label>
-              <input
-                type="text"
-                class="form-control shadow-sm"
-                id="formnama"
-                placeholder="Isikan Nama Anda"
-              />
+            <div class="mb-2">
+              <label for="formnama" class="block mb-2 form-label font-light text-[#686868]">Nama</label>
+              <input type="text" id="formnama" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Isikan Nama Anda" >
             </div>
-            <div class="mb-3">
-              <label for="hadiran" class="form-label" id="labelhadir"
-                >Kehadiran</label
-              >
-              <select
-                class="form-select shadow-sm"
-                aria-label="selectkehadiran"
-                id="hadiran"
-              >
+            <div class="mb-2">
+              <label for="hadiran" class="block mb-2 text-sm font-light text-[#686868]" id="labelhadir">Kehadiran</label>
+              <select id="hadiran" aria-label="selectkehadiran" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                 <option value="0" selected>Konfirmasi Kehadiran</option>
                 <option value="1">Hadir</option>
                 <option value="2">Berhalangan</option>
               </select>
             </div>
-            <div class="mb-3">
-              <label for="formpesan" class="form-label">Ucapan & Doa</label>
-              <textarea
-                class="form-control shadow-sm"
-                id="formpesan"
-                rows="4"
-                placeholder="Tulis Ucapan & Doa"
-              ></textarea>
+            <div class="mb-2">
+              <label for="formpesan" class="block mb-2 text-sm font-light text-[#686868]">Ucapan & Doa</label>
+              <textarea id="formpesan" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Tulis Ucapan & Doa"></textarea>
             </div>
-            <div class="d-flex">
-              <button
-                class="flex-fill btn btn-danger btn-sm rounded-4 shadow m-1"
-                style="display: none"
-                onclick="resetForm()"
-                id="batal"
-              >
+            <div class="flex flex-row justify-center">
+              <button id="batal" style="display: none" onclick="resetForm()" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2">
                 Batal<i class="fa-solid fa-xmark ms-1"></i>
               </button>
-              <button
-                class="flex-fill btn btn-primary btn-sm rounded-4 shadow m-1"
-                style="display: none"
-                onclick="kirimBalasan()"
-                id="kirimbalasan"
-              >
+              <button id="kirimbalasan" style="display: none" onclick="kirimBalasan()" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2">
                 Kirim<i class="fa-solid fa-paper-plane ms-1"></i>
               </button>
             </div>
-            <div class="d-grid mb-2">
-              <button
-                class="btn btn-primary btn-sm rounded-4 shadow"
-                onclick="kirim()"
-                id="kirim"
-              >
+            <div class="flex mt-2">
+              <button id="kirim" onclick="kirim()" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2">
                 Kirim<i class="fa-solid fa-paper-plane ms-1"></i>
               </button>
             </div>
           </div>
 
-          <div class="rounded-4 mt-4 mb-2">
+          <div class="rounded-xl mt-4 mb-2">
             <div id="daftarucapan"></div>
           </div>
 
           <nav class="d-flex justify-content-center">
-            <ul class="pagination mb-0">
+            <ul class="pagination mb-0 flex flex-row justify-center">
               <li class="page-item disabled" id="previous">
                 <button
-                  class="page-link"
+                  class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2"
                   onclick="pagination.previous(this)"
                   aria-label="Previous"
                 >
@@ -345,7 +318,7 @@
               </li>
               <li class="page-item" id="next">
                 <button
-                  class="page-link"
+                  class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2"
                   onclick="pagination.next(this)"
                   aria-label="Next"
                 >
@@ -371,7 +344,7 @@
             <div class="flex flex-col justify-center items-center px-4" style=" background-image: url('assets/bg/bg1.jpg'); background-size: cover; height: 100vh !important; ">
               <div class="bg-hero-top"></div>
               <div class="bg-hero-bottom"></div>
-              <div class="text-center px-4 md:px-36">
+              <div class="text-center px-4 md:px-36 z-50">
                 <p class="text-lg md:text-3xl font-light text-[#CA7F83]">Undangan Mepandes</p>
                 <h1 class="text-4xl md:text-6xl font-medium py-2 md:py-4 text-[#686868]">Santina & Wulan</h1>
                 <div id="namatamu"></div>
@@ -415,15 +388,17 @@
         }
         // Tambahkan event listener untuk mengaktifkan tautan navbar saat di-scroll
         window.addEventListener("scroll", setActiveNav);
-
         
       }
       // Panggil fungsi setActiveLink saat halaman selesai dimuat
       window.addEventListener("DOMContentLoaded", setActiveLink);
 
-
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha256-6o/gIaSs5PZ4b+zEGPcLZY/C3ALRNuj+XGq2tipG1dA=" crossorigin="anonymous"></script>
+    <!-- Bootstrap JavaScript hanya untuk modal -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="/js/bootstrap.min.js"></script> -->
+
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" integrity="sha256-pQBbLkFHcP1cy0C8IhoSdxlm0CtcH5yJ2ki9jjgR03c=" crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
   </body>

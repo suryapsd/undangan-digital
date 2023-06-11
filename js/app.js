@@ -258,17 +258,17 @@ const innerCard = (comment) => {
 
   comment.forEach((data) => {
       result += `
-      <div class="card-body border-start bg-light py-2 ps-2 pe-0 my-2 ms-2 me-0" id="${data.uuid}">
-          <div class="d-flex flex-wrap justify-content-between align-items-center">
-              <p class="text-dark text-truncate m-0 p-0" style="font-size: 0.95rem;">
-                  <strong>${escapeHtml(data.nama)}</strong>
-              </p>
-              <small class="text-dark m-0 p-0" style="font-size: 0.75rem;">${data.created_at}</small>
-          </div>
-          <hr class="text-dark my-1">
-          <p class="text-dark mt-0 mb-1 mx-0 p-0" style="white-space: pre-line">${escapeHtml(data.komentar)}</p>
-          <button style="font-size: 0.8rem;" onclick="balasan(this)" data-uuid="${data.uuid}" class="btn btn-sm btn-outline-dark rounded-4 py-0">Balas</button>
-          ${innerCard(data.comment)}
+      <div class="bg-white border border-gray-200 rounded-xl px-4 py-4 mt-2" id="${data.uuid}">
+        <div class="flex flex-wrap justify-between items-center">
+            <p class="text-dark truncate m-0 p-0 text-sm">
+            <strong>${escapeHtml(data.nama)}</strong>
+            </p>
+            <small class="text-dark m-0 p-0 text-xs">${data.created_at}</small>
+        </div>
+        <hr class="text-dark my-1">
+        <p class="text-dark mt-0 mb-1 mx-0 p-0 whitespace-pre-line">${escapeHtml(data.komentar)}</p>
+        <button style="font-size: 0.8rem;" onclick="balasan(this)" data-uuid="${data.uuid}" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2 mr-2">Balas</button>
+        ${innerCard(data.comment)}
       </div>`;
   });
 
@@ -279,17 +279,17 @@ const renderCard = (data) => {
   const DIV = document.createElement('div');
   DIV.classList.add('mb-3');
   DIV.innerHTML = `
-  <div class="card-body bg-light shadow p-3 m-0 rounded-4" id="${data.uuid}">
-      <div class="d-flex flex-wrap justify-content-between align-items-center">
-          <p class="text-dark text-truncate m-0 p-0" style="font-size: 0.95rem;">
-              <strong class="me-1">${escapeHtml(data.nama)}</strong>${data.hadir ? '<i class="fa-solid fa-circle-check text-success"></i>' : '<i class="fa-solid fa-circle-xmark text-danger"></i>'}
-          </p>
-          <small class="text-dark m-0 p-0" style="font-size: 0.75rem;">${data.created_at}</small>
-      </div>
-      <hr class="text-dark my-1">
-      <p class="text-dark mt-0 mb-1 mx-0 p-0" style="white-space: pre-line">${escapeHtml(data.komentar)}</p>
-      <button style="font-size: 0.8rem;" onclick="balasan(this)" data-uuid="${data.uuid}" class="btn btn-sm btn-outline-dark rounded-4 py-0">Balas</button>
-      ${innerCard(data.comment)}
+  <div class="bg-white border border-gray-200 rounded-xl px-4 py-4" id="${data.uuid}">
+    <div class="flex flex-wrap justify-between items-center">
+        <p class="text-dark truncate m-0 p-0 text-sm">
+        <strong class="me-1">${escapeHtml(data.nama)}</strong>${data.hadir ? '<i class="fa-solid fa-circle-check text-success"></i>' : '<i class="fa-solid fa-circle-xmark text-danger"></i>'}
+        </p>
+        <small class="text-dark m-0 p-0 text-xs">${data.created_at}</small>
+    </div>
+    <hr class="text-dark my-1">
+    <p class="text-dark mt-0 mb-1 mx-0 p-0 whitespace-pre-line">${escapeHtml(data.komentar)}</p>
+    <button style="font-size: 0.8rem;" onclick="balasan(this)" data-uuid="${data.uuid}" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2 mr-2">Balas</button>
+    ${innerCard(data.comment)}
   </div>`;
   return DIV;
 };
@@ -299,18 +299,18 @@ const renderLoading = (num) => {
   for (let index = 0; index < num; index++) {
       hasil += `
       <div class="mb-3">
-          <div class="card-body bg-light shadow p-3 m-0 rounded-4">
-              <div class="d-flex flex-wrap justify-content-between align-items-center placeholder-glow">
-                  <span class="placeholder bg-secondary col-5"></span>
-                  <span class="placeholder bg-secondary col-3"></span>
-              </div>
-              <hr class="text-dark my-1">
-              <p class="card-text placeholder-glow">
-                  <span class="placeholder bg-secondary col-6"></span>
-                  <span class="placeholder bg-secondary col-5"></span>
-                  <span class="placeholder bg-secondary col-12"></span>
-              </p>
-          </div>
+        <div class="bg-white border border-gray-200 rounded-xl px-4 py-4">
+            <div class="flex flex-wrap justify-between items-center placeholder-glow">
+            <span class="placeholder bg-secondary w-5/12"></span>
+            <span class="placeholder bg-secondary w-3/12"></span>
+            </div>
+            <hr class="text-dark my-1">
+            <p class="card-text placeholder-glow">
+            <span class="placeholder bg-secondary w-6/12"></span>
+            <span class="placeholder bg-secondary w-5/12"></span>
+            <span class="placeholder bg-secondary w-full"></span>
+            </p>
+        </div>
       </div>`;
   }
 
