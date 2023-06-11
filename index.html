@@ -66,6 +66,7 @@
             background-image: url('assets/bg/flower1.png');
             background-repeat: no-repeat;
             background-position: top right;
+            background-size: contain;
             position: absolute;
             top: 0;
             right: 0;
@@ -78,6 +79,7 @@
             background-image: url('assets/bg/flower2.png');
             background-repeat: no-repeat;
             background-position: bottom left;
+            background-size: contain;
             position: absolute;
             bottom: 0;
             left: 0;
@@ -89,12 +91,14 @@
           /* Media queries for mobile devices */
           @media (max-width: 767px) {
             .bg-hero-top {
-              background-size: contain;
+              width: 50%;
+              height: 50%;
               background-position: top center;
             }
 
             .bg-hero-bottom {
-              background-size: contain;
+              width: 50%;
+              height: 50%;
               background-position: bottom center;
             }
           }
@@ -104,66 +108,67 @@
   <body class="bg-white mb-24" data-email="user@example.com" data-password="12345678" data-url="https://undangan-api-gules.vercel.app">
     <div class="fixed bottom-0 z-50 w-full">
       <nav class="md:mx-24 rounded-t-lg bg-gradient-to-b from-slate-50/10 shadow-lg backdrop-blur-lg">
-      <ul class="flex justify-around" id="navbar">
-        <li class="py-2 text-gray-500">
-          <a href="#home" class="flex flex-col items-center text-center">
-          <span class="material-symbols-outlined">home</span>
-          <span class="text-xs">Home</span>
-          </a>
-        </li>
-        <li class="py-2 text-gray-500">
-          <a href="#person" class="flex flex-col items-center text-center">
-          <span class="material-symbols-outlined">groups</span>
-          <span class="text-xs">Orang</span>
-          </a>
-        </li>
-        <li class="py-2 text-gray-500">
-          <a href="#tanggal" class="flex flex-col items-center text-center">
-          <span class="material-symbols-outlined">calendar_month</span>
-          <span class="text-xs">Tanggal</span>
-          </a>
-        </li>
-        <li class="py-2 text-gray-500">
-          <a href="#ucapan" class="flex flex-col items-center text-center">
-          <span class="material-symbols-outlined">chat_bubble</span>
-          <span class="text-xs">Ucapan</span>
-          </a>
-        </li>
-      </ul>
+        <ul class="flex justify-around" id="navbar">
+          <li class="py-2 text-gray-500">
+            <a href="#home" class="flex flex-col items-center text-center">
+            <span class="material-symbols-outlined">home</span>
+            <span class="text-xs">Home</span>
+            </a>
+          </li>
+          <li class="py-2 text-gray-500">
+            <a href="#person" class="flex flex-col items-center text-center">
+            <span class="material-symbols-outlined">groups</span>
+            <span class="text-xs">Orang</span>
+            </a>
+          </li>
+          <li class="py-2 text-gray-500">
+            <a href="#tanggal" class="flex flex-col items-center text-center">
+            <span class="material-symbols-outlined">calendar_month</span>
+            <span class="text-xs">Tanggal</span>
+            </a>
+          </li>
+          <li class="py-2 text-gray-500">
+            <a href="#ucapan" class="flex flex-col items-center text-center">
+            <span class="material-symbols-outlined">chat_bubble</span>
+            <span class="text-xs">Ucapan</span>
+            </a>
+          </li>
+        </ul>
       </nav>
     </div>
 
-    <main class="scrollspy-example text-light" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
+    <main class="scrollspy-example text-light z-30" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
       <section class="mx-auto" id="home" style="background-image: url('assets/bg/bg1.jpg'); background-size: cover;">
         <div class="w-full min-h-screen flex flex-col justify-center items-center ">
           <div class="bg-hero-top"></div>
           <div class="bg-hero-bottom"></div>
-          <p class="text-xl md:text-4xl text-[#CA7F83]">Undangan Mepandes</p>
-          <h1 class="text-3xl md:text-6xl py-4 text-[#686868]">Santina & Wulan</h1>
-          <p class="text-xl md:text-4xl font-light text-[#CA7F83]">16.06.23</p>
+          <p class="text-lg md:text-4xl font-light text-[#CA7F83]">Undangan Mepandes</p>
+          <h1 class="text-4xl md:text-7xl sm:py-2 md:py-6 text-[#686868]">Santina & Wulan</h1>
+          <p class="text-lg md:text-4xl font-light text-[#CA7F83]">16.06.23</p>
+          <p class="text-[#CA7F83] animate-bounce w-6 h-6 pt-20"><span class="material-symbols-outlined scale-150">expand_circle_down</span></p>
         </div>
       </section>
 
       <section class="mx-auto" id="person">
-        <div class="w-full min-h-screen flex flex-col justify-center items-center bg-white text-center sm:px-4 sm:py-12 md:px-36 md:my-12">
-          <h1 class="sm:text-xl md:text-4xl text-[#CA7F83] mb-4">Om Swastyastu</h1>
-          <p class="sm:text-md md:text-xl font-light italic text-[#686868]">
+        <div class="w-full min-h-screen flex flex-col justify-center items-center bg-white text-center px-4 py-12 md:px-36 md:my-12">
+          <h1 class="text-xl md:text-4xl text-[#CA7F83] mb-4">Om Swastyastu</h1>
+          <p class="text-md md:text-xl font-light italic text-[#686868]">
             Atas Asung Kertha Wara Nugraha Ida Sang Hyang Widhi Waya/Tuhan Yang Maha Esa kami bermaksud mengundang Bapak/Ibu/Saudara/i pada Upacara Manusa Yadnya Mepandes (Potong Gigi) kami.
           </p>
           <div class="md:flex md:justify-content-between my-16">
             <div class="flex flex-col justify-center items-center text-center">
-              <h1 class="sm:text-xl md:text-3xl text-[#CA7F83] mb-4">Ni Putu Santina</h1>
+              <h1 class="text-xl md:text-3xl text-[#CA7F83] mb-4">Ni Putu Santina</h1>
               <img src="assets/images/divide.svg" alt="divide"/>
-              <p class="sm:text-md md:text-xl font-light text-[#686868] mt-4">
+              <p class="text-md md:text-xl font-light text-[#686868] mt-4">
                 Putri Pertama dari Pasangan <br/>
                 Bapak Ni Putu Santina <br/>
                 & <br/>Ibu Ni Putu Yeni</p>
             </div>
-            <h1 class="text-3xl md:text-7xl font-light mx-12 self-center text-[#CA7F83]">&</h1>
+            <h1 class="text-3xl md:text-7xl font-light md:mx-20 my-8 self-center text-[#CA7F83]">&</h1>
             <div class="flex flex-col justify-center items-center text-center">
-              <h1 class="sm:text-xl md:text-3xl text-[#CA7F83] mb-4">Ni Kadek Wulan Exsly</h1>
+              <h1 class="text-xl md:text-3xl text-[#CA7F83] mb-4">Ni Kadek Wulan Exsly</h1>
               <img src="assets/images/divide.svg" alt="divide"/>
-              <p class="sm:text-md md:text-xl font-light text-[#686868] mt-4">
+              <p class="text-md md:text-xl font-light text-[#686868] mt-4">
                 Putri Kedua dari Pasangan <br/>
                 Bapak Ni Putu Santina <br/>
                 & <br/>Ibu Ni Putu Yeni</p>
@@ -178,17 +183,17 @@
       </section>
 
       <section class="mx-auto" id="tanggal" style=" background-image: url('assets/bg/bg2.jpg'); background-size: cover; ">
-        <div class="w-full min-h-screen flex flex-col justify-center items-center px-4 py-12 md:px-24 md:my-12">
-          <h1 class="sm:text-xl md:text-4xl text-[#CA7F83] text-center mb-2">Waktu & Tempat</h1>
-          <p class="sm:text-md md:text-xl font-light italic text-center text-[#686868]">
+        <div class="w-full min-h-screen flex flex-col justify-center items-center px-4 py-8 md:px-36 md:my-12">
+          <h1 class="text-2xl md:text-4xl text-[#CA7F83] text-center mb-2">Waktu & Tempat</h1>
+          <p class="text-md md:text-xl font-light italic text-center text-[#686868]">
             Merupakan suatu kehormatan dan kebahagian kami apabila Bapak/Ibu/Saudara/i berkenan hadir memberikan doa restu.
           </p>
           <div class="w-full md:w-2/6 flex rounded-xl outline outline-1 outline-[#686868] my-12">
-            <div class="bg-white flex flex-col justify-center items-center text-center sm:px-2 sm:py-2 md:px-8 md:py-8 rounded-l-xl">
+            <div class="bg-white flex flex-col justify-center items-center text-center w-2/6 py-2 md:px-8 md:py-8 rounded-l-xl">
               <p class="text-4xl md:text-6xl font-medium text-[#686868]">16</p>
               <p class="text-md md:text-lg font-normal text-[#686868]">Juni 2023</p>
             </div>
-            <div class="px-4 w-full flex flex-col justify-center">
+            <div class="px-2 md:px-4 py-2 w-4/6 flex flex-col justify-center">
               <div class="border-b-[1px] border-[#686868]">
                 <p class="text-lg md:text-2xl font-medium text-[#686868] pb-2">Mepandes</p>
               </div>
@@ -198,7 +203,7 @@
           </div>
 
           <!-- tanggal -->
-          <div class="w-1/2 flex justify-evenly item-center text-center mb-8" data-waktu="2023-06-12 00:00:00" id="tampilan-waktu">
+          <div class="w-full md:w-1/2 flex justify-between text-center mb-8" data-waktu="2023-06-12 00:00:00" id="tampilan-waktu">
             <div class="bg-white rounded-lg py-4 px-4">
               <p class="text-lg md:text-2xl font-medium text-[#686868]" id="hari">0</p>
               <p class="text-sm md:text-xl font-light text-[#686868]">Hari</p>
@@ -217,21 +222,21 @@
             </div>
           </div>
 
-          <p class="sm:text-md md:text-xl font-light italic text-center text-[#686868]">
+          <p class="text-md md:text-xl font-light italic text-center text-[#686868]">
             Atas kehadiran dan doa restunya kami ucapkan terima kasih
           </p>
-          <h1 class="sm:text-xl md:text-4xl text-[#CA7F83] text-center mt-4">Om Shanti Shanti Shanti Om</h1>
+          <h1 class="text-2xl md:text-4xl text-[#CA7F83] text-center mt-4">Om Shanti Shanti Shanti Om</h1>
         </div>
       </section>
 
       <section class="mx-auto" id="person">
-        <div class="w-full flex flex-col justify-center items-center bg-white text-center sm:px-4 sm:py-4 md:px-36 md:my-4">
-          <h1 class="sm:text-xl md:text-4xl text-[#CA7F83] mb-2">Love Gift</h1>
-          <p class="sm:text-md md:text-xl font-light italic text-[#686868]">
+        <div class="w-full flex flex-col justify-center items-center bg-white text-center px-4 py-4 md:px-36 md:my-12">
+          <h1 class="text-2xl md:text-4xl text-[#CA7F83] mb-2">Love Gift</h1>
+          <p class="text-md md:text-xl font-light italic text-[#686868]">
             Tanpa mengurangi rasa hormat, bagi anda yang ingin memberikan tanda kasih untuk kami, dapat melalui :
           </p>
-          <div class="w-full md:flex md:justify-between ">
-            <div id="1" class="md:w-1/2 flex flex-col justify-center items-center text-center bg-white border-[1px] border-[#686868] rounded-xl px-12 py-6 mx-4 my-6">
+          <div class="w-full md:flex md:justify-center md:items-center">
+            <div id="1" class="w-full md:w-2/6 flex flex-col justify-center items-center text-center bg-white border-[1px] border-gray-200 rounded-xl py-4 md:mx-4 my-6">
               <img
                 src="https://upload.wikimedia.org/wikipedia/id/thumb/5/55/BNI_logo.svg/1200px-BNI_logo.svg.png"
                 class="img-fluid rounded"
@@ -241,7 +246,7 @@
               <p class="text-md md:text-xl font-light text-[#686868] mt-4">No. Rekening 123456789<br>a.n Lorem ipsum dolor</p>
               <button class="btn btn-light btn-sm rounded-4 mt-4" data-nomer="123456789" onclick="salin(this)">Salin No. Rekening</button>
             </div>
-            <div id="2" class="md:w-1/2 flex flex-col justify-center items-center text-center bg-white border-[1px] border-[#686868] rounded-xl px-12 py-6 mx-4 my-6">
+            <div id="2" class="w-full md:w-2/6 flex flex-col justify-center items-center text-center bg-white border-[1px] border-gray-200 rounded-xl py-4 md:mx-4 my-6">
               <img
                 src="https://upload.wikimedia.org/wikipedia/id/thumb/5/55/BNI_logo.svg/1200px-BNI_logo.svg.png"
                 class="img-fluid rounded"
