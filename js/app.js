@@ -142,13 +142,13 @@ const balasan = async (button) => {
               BALAS.innerHTML = `
               <div class="bg-white border border-gray-200 rounded-xl px-4 py-4 my-4">
                   <div class="d-flex flex-wrap justify-content-between align-items-center">
-                      <p class="text-dark text-truncate m-0 p-0" style="font-size: 0.95rem;">
+                      <p class="text-[#686868] text-truncate m-0 p-0" style="font-size: 0.95rem;">
                           <strong>${escapeHtml(res.data.nama)}</strong>
                       </p>
-                      <small class="text-dark m-0 p-0" style="font-size: 0.75rem;">${res.data.created_at}</small>
+                      <small class="text-[#686868] m-0 p-0" style="font-size: 0.75rem;">${res.data.created_at}</small>
                   </div>
-                  <hr class="text-dark my-1">
-                  <p class="text-dark m-0 p-0" style="white-space: pre-line">${escapeHtml(res.data.komentar)}</p>
+                  <hr class="text-[#686868] my-1">
+                  <p class="text-[#686868] m-0 p-0" style="white-space: pre-line">${escapeHtml(res.data.komentar)}</p>
               </div>`;
           }
 
@@ -260,13 +260,13 @@ const innerCard = (comment) => {
       result += `
       <div class="bg-white border border-gray-200 rounded-xl px-4 py-4 mt-2" id="${data.uuid}">
         <div class="flex flex-wrap justify-between items-center">
-            <p class="text-dark truncate m-0 p-0 text-sm">
+            <p class="text-[#686868] truncate m-0 p-0 text-sm">
             <strong>${escapeHtml(data.nama)}</strong>
             </p>
-            <small class="text-dark m-0 p-0 text-xs">${data.created_at}</small>
+            <small class="text-[#686868] m-0 p-0 text-xs">${data.created_at}</small>
         </div>
-        <hr class="text-dark my-1">
-        <p class="text-dark mt-0 mb-1 mx-0 p-0 whitespace-pre-line">${escapeHtml(data.komentar)}</p>
+        <hr class="text-[#686868] my-1">
+        <p class="text-[#686868] mt-0 mb-1 mx-0 p-0 whitespace-pre-line">${escapeHtml(data.komentar)}</p>
         <button style="font-size: 0.8rem;" onclick="balasan(this)" data-uuid="${data.uuid}" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2 mr-2">Balas</button>
         ${innerCard(data.comment)}
       </div>`;
@@ -281,13 +281,13 @@ const renderCard = (data) => {
   DIV.innerHTML = `
   <div data-aos="fade-up" class="bg-white border border-gray-200 rounded-xl px-4 py-4" id="${data.uuid}">
     <div class="flex flex-wrap justify-between items-center">
-        <p class="text-dark truncate m-0 p-0 text-sm ">
+        <p class="text-[#686868] truncate m-0 p-0 text-sm ">
         <strong class="me-1">${escapeHtml(data.nama)}</strong>${data.hadir ? '<span class="items-center text-xs text-[#686868]">(Hadir)</span>' : '<span class="text-xs text-[#686868]">(Tidak Hadir)</span>'}
         </p>
-        <small class="text-dark m-0 p-0 text-xs">${data.created_at}</small>
+        <small class="text-[#686868] m-0 p-0 text-xs">${data.created_at}</small>
     </div>
-    <hr class="text-dark my-1">
-    <p class="text-dark mt-0 mb-1 mx-0 p-0 whitespace-pre-line">${escapeHtml(data.komentar)}</p>
+    <hr class="text-[#686868] my-1">
+    <p class="text-[#686868] mt-0 mb-1 mx-0 p-0 whitespace-pre-line">${escapeHtml(data.komentar)}</p>
     <button style="font-size: 0.8rem;" onclick="balasan(this)" data-uuid="${data.uuid}" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2 mr-2">Balas</button>
     ${innerCard(data.comment)}
   </div>`;
@@ -304,7 +304,7 @@ const renderLoading = (num) => {
             <span class="placeholder bg-secondary w-5/12"></span>
             <span class="placeholder bg-secondary w-3/12"></span>
             </div>
-            <hr class="text-dark my-1">
+            <hr class="text-[#686868] my-1">
             <p class="card-text placeholder-glow">
             <span class="placeholder bg-secondary w-6/12"></span>
             <span class="placeholder bg-secondary w-5/12"></span>
