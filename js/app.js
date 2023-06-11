@@ -281,8 +281,8 @@ const renderCard = (data) => {
   DIV.innerHTML = `
   <div data-aos="fade-up" class="bg-white border border-gray-200 rounded-xl px-4 py-4" id="${data.uuid}">
     <div class="flex flex-wrap justify-between items-center">
-        <p class="text-dark truncate m-0 p-0 text-sm">
-        <strong class="me-1">${escapeHtml(data.nama)}</strong>${data.hadir ? '<span class="text-xs text-[#686868]">(<i class="fa-solid fa-circle-check"></i> Hadir)</span>' : '<span class="text-xs text-[#686868]">(<i class="fa-solid fa-circle-xmark"></i> Tidak Hadir)</span>'}
+        <p class="text-dark truncate m-0 p-0 text-sm ">
+        <strong class="me-1">${escapeHtml(data.nama)}</strong>${data.hadir ? '<span class="items-center text-xs text-[#686868]">(Hadir)</span>' : '<span class="text-xs text-[#686868]">(Tidak Hadir)</span>'}
         </p>
         <small class="text-dark m-0 p-0 text-xs">${data.created_at}</small>
     </div>
