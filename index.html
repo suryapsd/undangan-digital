@@ -84,6 +84,7 @@
             background-image: url('assets/bg/flower1.png');
             background-repeat: no-repeat;
             background-position: top right;
+            background-size: contain;
             position: absolute;
             top: 0;
             right: 0;
@@ -96,6 +97,7 @@
             background-image: url('assets/bg/flower2.png');
             background-repeat: no-repeat;
             background-position: bottom left;
+            background-size: contain;
             position: absolute;
             bottom: 0;
             left: 0;
@@ -153,17 +155,19 @@
       </nav>
     </div>
 
-    <main class="scrollspy-example text-light z-30" data-bs-spy="scroll" data-bs-smooth-scroll="true" tabindex="0">
+    <main class="scrollspy-example text-light z-30" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
       
-      <section class="mx-auto" id="home" style="background-image: url('assets/bg/bg1.jpg'); width: 100%; min-height: 100vh; background-size: cover;">
-        <div class="w-full min-h-screen flex flex-col justify-center items-center">
-          <p class="text-lg md:text-4xl font-light text-[#CA7F83]">Undangan Mepandes</p>
-          <h1 class="text-4xl md:text-7xl py-3 md:py-6 text-[#686868]">Santina & Wulan</h1>
-          <p class="text-lg md:text-4xl font-light text-[#CA7F83] mb-20">16.06.23</p>
-          <a href="#person" class="text-[#CA7F83] animate-bounce w-6 h-6 z-50"><span class="material-symbols-outlined scale-150">expand_circle_down</span></a>
+      <section class="mx-auto" id="home">
+        <div class="w-full min-h-screen">
+          <div class="flex flex-col justify-center items-center px-4" style=" background-image: url('assets/bg/bg1.jpg'); background-size: cover; height: 100vh !important; ">
+            <div class="bg-hero-top"></div>
+            <div class="bg-hero-bottom"></div>
+            <p class="text-lg md:text-4xl font-light text-[#CA7F83]">Undangan Mepandes</p>
+            <h1 class="text-4xl md:text-7xl py-3 md:py-6 text-[#686868]">Santina & Wulan</h1>
+            <p class="text-lg md:text-4xl font-light text-[#CA7F83] mb-20">16.06.23</p>
+            <a href="#person" class="text-[#CA7F83] animate-bounce w-6 h-6 z-50"><span class="material-symbols-outlined scale-150">expand_circle_down</span></a>
+          </div>
         </div>
-        <div class="bg-hero-top"></div>
-        <div class="bg-hero-bottom"></div>
       </section>
 
       <section class="mx-auto" id="person">
