@@ -140,7 +140,7 @@ const balasan = async (button) => {
               document.getElementById('idbalasan').value = id;
 
               BALAS.innerHTML = `
-              <div class="card-body bg-light shadow p-3 my-2 rounded-4">
+              <div class="bg-white border border-gray-200 rounded-xl px-4 py-4 my-4">
                   <div class="d-flex flex-wrap justify-content-between align-items-center">
                       <p class="text-dark text-truncate m-0 p-0" style="font-size: 0.95rem;">
                           <strong>${escapeHtml(res.data.nama)}</strong>
