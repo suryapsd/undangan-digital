@@ -66,7 +66,7 @@
             background-image: url('assets/bg/flower1.png');
             background-repeat: no-repeat;
             background-position: top right;
-            background-size: cover;
+            background-size: contain;
             position: absolute;
             top: 0;
             right: 0;
@@ -79,7 +79,7 @@
             background-image: url('assets/bg/flower2.png');
             background-repeat: no-repeat;
             background-position: bottom left;
-            background-size: cover;
+            background-size: contain;
             position: absolute;
             bottom: 0;
             left: 0;
@@ -91,13 +91,11 @@
           /* Media queries for mobile devices */
           @media (max-width: 767px) {
             .bg-hero-top {
-              background-size: contain;
               width: 50%;
               height: 50%;
             }
 
             .bg-hero-bottom {
-              background-size: contain;
               width: 50%;
               height: 50%;
             }
@@ -140,16 +138,13 @@
     <main class="scrollspy-example text-light z-30" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
       
       <section class="mx-auto" id="home">
-        <div class="w-full min-h-screen flex flex-col justify-center items-center" style="background-image: url('assets/bg/bg1.jpg'); background-size: cover;  height: 100vh !important;">
+        <div class="w-full min-h-screen flex flex-col justify-center items-center" style="background-image: url('assets/bg/bg1.jpg'); background-size: cover;">
+          <div class="bg-hero-top"></div>
+          <div class="bg-hero-bottom"></div>
           <p class="text-lg md:text-4xl font-light text-[#CA7F83]">Undangan Mepandes</p>
           <h1 class="text-4xl md:text-7xl py-3 md:py-6 text-[#686868]">Santina & Wulan</h1>
           <p class="text-lg md:text-4xl font-light text-[#CA7F83]">16.06.23</p>
           <p class="text-[#CA7F83] animate-bounce w-6 h-6 pt-20"><span class="material-symbols-outlined scale-150">expand_circle_down</span></p>
-          <div class="absolute inset-0">
-            <div class="bg-hero-top"></div>
-            <div class="bg-hero-bottom"></div>
-          </div>
-        </div>
         </div>
       </section>
 
@@ -266,8 +261,8 @@
 
       <section class="mx-auto" id="ucapan">
         <div class="px-4 py-4 md:px-36 md:my-12">
-          <div class="card-body border rounded-4 shadow">
-            <h1 class="font-estetik text-center mb-3" style="font-size: 3rem">
+          <div class="bg-white border-[1px] border-gray-200 rounded-xl mx-2">
+            <h1 class="text-2xl md:text-4xl text-[#CA7F83] mb-2" style="font-size: 3rem">
               Ucapan & Doa
             </h1>
             <input type="hidden" id="idbalasan" />
@@ -382,7 +377,8 @@
                 <div id="namatamu"></div>
                 <p class="md:text-lg font-light text-[#686868]">Anda dengan hormat diundang ke acara mepandes kami.</p>
                 <button type="button" class="py-2 px-4 mt-4 bg-white hover:bg-gray-400 hover:shadow-lg hover:-translate-y-1 duration-100 rounded-lg text-[#CA7F83]" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="buka()">
-                <i class="bi bi-envelope-open mr-2"></i></i>Buka Undangan </button>
+                  <i class="bi bi-envelope-open mr-2"></i></i>Buka Undangan 
+                </button>
               </div>
             </div>
           </div>
