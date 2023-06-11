@@ -558,7 +558,7 @@ window.addEventListener('load', () => {
       let div = document.createElement('div');
       div.classList.add('m-2');
       div.innerHTML = `
-      <p class="md:text-lg font-light py-2 text-[#686868]">Kepada Bapak/Ibu/Saudara/i</p>
+      <p class="md:text-lg font-light text-[#686868]">Kepada Bapak/Ibu/Saudara/i</p>
       <p class="text-xl md:text-3xl py-2 font-medium text-[#CA7F83]">${escapeHtml(name)}</p>
       `;
 
