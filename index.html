@@ -66,7 +66,7 @@
             background-image: url('assets/bg/flower1.png');
             background-repeat: no-repeat;
             background-position: top right;
-            background-size: contain;
+            background-size: cover;
             position: absolute;
             top: 0;
             right: 0;
@@ -79,7 +79,7 @@
             background-image: url('assets/bg/flower2.png');
             background-repeat: no-repeat;
             background-position: bottom left;
-            background-size: contain;
+            background-size: cover;
             position: absolute;
             bottom: 0;
             left: 0;
@@ -91,11 +91,13 @@
           /* Media queries for mobile devices */
           @media (max-width: 767px) {
             .bg-hero-top {
+              background-size: contain;
               width: 50%;
               height: 50%;
             }
 
             .bg-hero-bottom {
+              background-size: contain;
               width: 50%;
               height: 50%;
             }
