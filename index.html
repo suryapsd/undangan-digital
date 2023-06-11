@@ -84,7 +84,6 @@
             background-image: url('assets/bg/flower1.png');
             background-repeat: no-repeat;
             background-position: top right;
-            background-size: contain;
             position: absolute;
             top: 0;
             right: 0;
@@ -97,7 +96,6 @@
             background-image: url('assets/bg/flower2.png');
             background-repeat: no-repeat;
             background-position: bottom left;
-            background-size: contain;
             position: absolute;
             bottom: 0;
             left: 0;
@@ -155,14 +153,14 @@
       </nav>
     </div>
 
-    <main class="scrollspy-example text-light z-30" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" tabindex="0">
+    <main class="scrollspy-example text-light z-30" data-bs-spy="scroll" data-bs-smooth-scroll="true" tabindex="0">
       
-      <section class="mx-auto" id="home">
-        <div class="w-full min-h-screen flex flex-col justify-center items-center" style="background-image: url('assets/bg/bg1.jpg'); width: 100%; min-height: 100vh;">
+      <section class="mx-auto" id="home" style="background-image: url('assets/bg/bg1.jpg'); width: 100%; min-height: 100vh; background-size: cover;">
+        <div class="w-full min-h-screen flex flex-col justify-center items-center">
           <p class="text-lg md:text-4xl font-light text-[#CA7F83]">Undangan Mepandes</p>
           <h1 class="text-4xl md:text-7xl py-3 md:py-6 text-[#686868]">Santina & Wulan</h1>
-          <p class="text-lg md:text-4xl font-light text-[#CA7F83]">16.06.23</p>
-          <a href="#person" class="text-[#CA7F83] animate-bounce w-6 h-6 pt-20 z-50"><span class="material-symbols-outlined scale-150">expand_circle_down</span></a>
+          <p class="text-lg md:text-4xl font-light text-[#CA7F83] mb-20">16.06.23</p>
+          <a href="#person" class="text-[#CA7F83] animate-bounce w-6 h-6 z-50"><span class="material-symbols-outlined scale-150">expand_circle_down</span></a>
         </div>
         <div class="bg-hero-top"></div>
         <div class="bg-hero-bottom"></div>
@@ -210,35 +208,35 @@
               Merupakan suatu kehormatan dan kebahagian kami apabila Bapak/Ibu/Saudara/i berkenan hadir memberikan doa restu.
             </p>
           </div>
-          <div data-aos="fade-up" class="w-full md:w-3/6 flex rounded-xl outline outline-1 outline-[#686868] my-12">
-            <div class="bg-white flex flex-col justify-center items-center text-center w-2/6 py-2 md:px-8 md:py-8 rounded-l-xl">
+          <div data-aos="fade-up" class="w-full md:w-3/6 flex rounded-xl outline outline-1 outline-gray-200 my-12">
+            <div class="bg-white flex flex-col justify-center items-center text-center w-2/6 py-2 md:px-8 md:py-8 rounded-l-xl border-r-[1px] border-gray-200">
               <p class="text-4xl md:text-6xl font-medium text-[#686868]">16</p>
               <p class="text-md md:text-lg font-normal text-[#686868]">Juni 2023</p>
             </div>
-            <div class="px-2 md:px-4 py-2 w-4/6 flex flex-col justify-center">
-              <div class="border-b-[1px] border-[#686868]">
+            <div class="bg-white px-2 md:px-4 py-2 w-4/6 flex flex-col justify-center rounded-r-xl">
+              <div class="border-b-[1px] border-gray-200">
                 <p class="text-lg md:text-2xl font-medium text-[#686868] pb-2">Mepandes</p>
               </div>
-              <span class="text-sm md:text-xl flex items-center font-medium pt-3 text-[#686868]"><span class="material-symbols-outlined mr-2 pb-0.5">schedule</span>12.00 WITA - Selesai</span>
-              <a href="#" class="text-sm md:text-xl flex items-center font-medium pt-3 text-[#CA7F83] hover:text-[#A8585C]"><span class="material-symbols-outlined mr-2 pb-0.5">map</span> Lihat Google Maps</a>
+              <span class="text-sm md:text-xl flex items-center font-normal pt-3 text-[#686868]"><span class="material-symbols-outlined mr-2 pb-0.5">schedule</span>12.00 WITA - Selesai</span>
+              <a href="#" class="text-sm md:text-xl flex items-center font-normal pt-3 text-[#CA7F83] hover:text-[#A8585C]"><span class="material-symbols-outlined mr-2 pb-0.5">map</span> Lihat Google Maps</a>
             </div>
           </div>
 
           <!-- tanggal -->
           <div data-aos="fade-up" class="w-full md:w-1/2 flex justify-between text-center mb-8" data-waktu="2023-06-12 00:00:00" id="tampilan-waktu">
-            <div class="w-1/4 flex flex-col justify-center text-center bg-white rounded-lg mx-2 py-2">
+            <div class="w-1/4 flex flex-col justify-center text-center bg-white rounded-lg mx-2 py-2 outline outline-1 outline-gray-200">
               <p class="text-lg md:text-2xl font-medium text-[#686868]" id="hari">0</p>
               <p class="text-sm md:text-md font-light text-[#686868]">Hari</p>
             </div>
-            <div class="w-1/4 flex flex-col justify-center text-center bg-white rounded-lg mx-2 py-2">
+            <div class="w-1/4 flex flex-col justify-center text-center bg-white rounded-lg mx-2 py-2 outline outline-1 outline-gray-200">
               <p class="text-lg md:text-2xl font-medium text-[#686868]" id="jam">0</p>
               <p class="text-sm md:text-md font-light text-[#686868]">Jam</p>
             </div>
-            <div class="w-1/4 flex flex-col justify-center text-center bg-white rounded-lg mx-2 py-2">
+            <div class="w-1/4 flex flex-col justify-center text-center bg-white rounded-lg mx-2 py-2 outline outline-1 outline-gray-200">
               <p class="text-lg md:text-2xl font-medium text-[#686868]" id="menit">0</p>
               <p class="text-sm md:text-md font-light text-[#686868]">Menit</p>
             </div>
-            <div class="w-1/4 flex flex-col justify-center text-center bg-white rounded-lg mx-2 py-2">
+            <div class="w-1/4 flex flex-col justify-center text-center bg-white rounded-lg mx-2 py-2 outline outline-1 outline-gray-200">
               <p class="text-lg md:text-2xl font-medium text-[#686868]" id="detik">0</p>
               <p class="text-sm md:text-md font-light text-[#686868]">Detik</p>
             </div>
