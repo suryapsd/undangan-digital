@@ -557,7 +557,7 @@ window.addEventListener('load', () => {
   } else {
       let div = document.createElement('div');
       div.innerHTML = `
-      <p class="text-sm md:text-lg mt-2 text-[#686868]">Kepada Bapak/Ibu/Saudara/i</p>
+      <p class="text-sm md:text-lg mt-4 text-[#686868]">Kepada Bapak/Ibu/Saudara/i</p>
       <p class="text-xl md:text-3xl my-2 font-medium text-[#CA7F83]">${escapeHtml(name)}</p>
       `;
 
